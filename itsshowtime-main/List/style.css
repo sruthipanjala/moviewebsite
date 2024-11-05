@@ -1,0 +1,136 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F4BF96;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.container .search-box{
+    position: relative;
+    height: 42px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.search-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #323334;
+    padding: 0 15px 0 45px;
+    color: #fff;
+    border-radius: 6px;
+}
+.search-box i{
+    position: absolute;
+    z-index: 2;
+    color: #999;
+    top: 50%;
+    left: 15px;
+    background-color: transparent;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+.container .images .image-box{
+    position: relative;
+    height: 300px;
+    width: 210px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.images{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.images .image-box{
+    margin: 8px;
+}
+.images .image-box img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.2s linear;
+}
+.image-box:hover img{
+    transform: scale(1.05);
+}
+
+.image-box .content {
+    bottom: -65px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),hsl(0 0% 0% / 1)
+    );
+    position: absolute;
+    transition: all ease-out 0.3s;
+}
+.image-box:hover .content{
+    transform: translateY(-65px);
+}
+
+.image-box h6{
+    position: absolute;
+    bottom: 65px;
+    left: 10px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 3px;
+}
+.image-box p{
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 9px;
+    font-weight: 300;
+    text-transform: capitalize;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.image-box button{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    font-size: 9px;
+    font-weight: 500;
+
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: orange;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0 0 white,
+    2px 2px 0 0 black;
+    transition: 200ms;
+    opacity: 1;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+.image-box button:hover {
+    box-shadow: 1px 1px white,
+    2px 2px 0 0 black;
+    transform: translate(2px,2px);
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta data-name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--===== Boxicons CSS =====-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Image Gallery with Search Box</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search a movie">
+        </div>
+
+        <!-- <div class="images">
+            <div class="image-box" data-name="animal" data-genre="hindi action romance thriller">
+                <img src="../Movies/animal.jpg" alt="">
+                <div class="content">
+                    <h6>Animal</h6>
+                    <p>A gangster drama that explores the turbulent relationships between all the characters that eventually lead to the protagonist becoming an 'animal' in nature.</p>
+                    <button onclick="goToTicket('Animal')">Book Now</button>
+                </div>    
+            </div>   
+        </div> -->
+        <div class="images">
+            <div class="image-box" data-name="aquaman" data-genre="english action superhero">
+                <img src="../Movies/English/aquaman.jpeg" alt="">
+                <div class="content">
+                    <h6>Aquaman 2</h6>
+                    <p>After failing to defeat Aquaman the first time, Black Manta wields the power of the mythic Black Trident to unleash an ancient and malevolent force. Hoping to end his reign of terror, Aquaman forges an unlikely alliance with his brother, Orm, the former king of Atlantis.</p>
+                    <button onclick="goToTicket('Aquaman 2')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="blue beetle" data-genre="english action sci-fi superhero">
+                <img src="../Movies/English/blue-beetle.jpg" alt="">
+                <div class="content">
+                    <h6>Blue Beetle</h6>
+                    <p>Jaime Reyes suddenly finds himself in possession of an ancient relic of alien biotechnology called the Scarab. When the Scarab chooses Jaime to be its symbiotic host, he's bestowed with an incredible suit of armor that's capable of extraordinary and unpredictable powers</p>
+                    <button onclick="goToTicket('Blue Beetle')">Book Now</button>
+                </div>
+                </div>    
+            <div class="image-box" data-name="captain" data-genre="english action superhero">
+                <img src="../Movies/English/captain.jpg" alt="">
+                <div class="content">
+                    <h6>Captain</h6>
+                    <p>Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a "Super-Soldier serum". But being Captain America comes at a price as he attempts to take down a warmonger and a terrorist organization.</p>
+                    <button onclick="goToTicket('Captain')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="flash" data-genre="english action sci-fi superhero">
+                <img src="../Movies/English/flash.jpg" alt="">
+                <div class="content">
+                    <h6>Flash</h6>
+                    <p>After helping Bruce Wayne / Batman and Diana Prince / Wonder Woman stop a robbery in Gotham City, Barry Allen revisits his childhood home, where he lived with his parents Nora and Henry, before Henry's wrongful imprisonment for Nora's murder.</p>
+                    <button onclick="goToTicket('Flash')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="joker 2" data-genre="english comedy superhero">
+                <img src="../Movies/English/joker.jpeg" alt="">
+                <div class="content">
+                    <h6>Joker 2</h6>
+                    <p> Based on DC Comics characters, the film is the sequel to Joker (2019) and stars Joaquin Phoenix, reprising his role as the Joker, and Lady Gaga as Harley Quinn. Zazie Beetz also reprises her role from the first film.</p>
+                    <button onclick="goToTicket('Joker 2')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="inception" data-genre="english action sci-fi">
+                <img src="../Movies/English/inception.jpg" alt="">
+                <div class="content">
+                    <h6>Inception</h6>
+                    <p>The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased, as payment for the implantation of another person's idea into a target's subconscious.</p>
+                    <button onclick="goToTicket('Inception')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="kraven the hunter" data-genre="english action sci-fi">
+                <img src="../Movies/English/kraven the hunter.jpg" alt="">
+                <div class="content">
+                    <h6>Kraven The Hunter</h6>
+                    <p>Kraven the Hunter is an upcoming American superhero film based on the Marvel Comics character of the same name. Produced by Columbia Pictures in association with Marvel Entertainment, and distributed by Sony Pictures Releasing, it is intended to be the fifth film in Sony's Spider-Man Universe.</p>
+                    <button onclick="goToTicket('Kraven The Hunter')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="marvels" data-genre="english action superhero">
+                <img src="../Movies/English/marvels.jpg" alt="">
+                <div class="content">
+                    <h6>The Marvels</h6>
+                    <p>Carol Danvers defies the influence of the Supreme Intelligence and destroys it, which leads to a Kree civil war and the desolation of their home world, Hala. The conflict renders the planet barren as it loses its air, water, and sunlight.</p>
+                    <button onclick="goToTicket('The Marvels')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="dune 2" data-genre="english action sci-fi">
+                <img src="../Movies/English/dune2.jpeg" alt="">
+                <div class="content">
+                    <h6>Dune: PART 2</h6>
+                    <p>Duke Leto Atreides, ruler of the planet Caladan, is assigned by the Padishah Emperor Shaddam IV to replace Baron Vladimir Harkonnen as the fiefholder of Arrakis, a harsh desert planet and sole source of "spice", a valuable psychotropic substance that imparts heightened vitality and awareness.</p>
+                    <button onclick="goToTicket('Dune: PART 2')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="godzilla vs kong 2" data-genre="english action sci-fi">
+                <img src="../Movies/English/godzilla vs kong 2.jpg" alt="">
+                <div class="content">
+                    <h6>Godzilla VS KONG 2</h6>
+                    <p>Godzilla and Kong face a terrifying monster that threatens the entire planet.</p>
+                    <button onclick="goToTicket('Godzilla VS KONG 2')">Book Now</button>
+                </div>
+            </div>
+            <!-- Telugu Section -->
+            <div class="image-box" data-name="Devara" data-genre="telugu action">
+                <img src="../Movies/telugu/Devara .jpeg" alt="">
+                <div class="content">
+                    <h6>Devara</h6>
+                    <p>Devara is an intensive tale about a man who struck fear in the minds of those who were naive to it.</p>
+                    <button onclick="goToTicket('Devara')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="DJ-Tillu2" data-genre="telugu comedy">
+                <img src="../Movies/telugu/DJ-Tillu2.jpeg" alt="">
+                <div class="content">
+                    <h6>DJ Tillu 2</h6>
+                    <p>Tillu Square is an upcoming Indian Telugu-language romantic crime comedy film directed by Mallik Ram and produced by Suryadevara Naga Vamsi under the banner of Sithara Entertainments and Fortune Four Cinemas. It is the sequel to the 2022 film DJ Tillu.</p>
+                    <button onclick="goToTicket('DJ-Tillu 2')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="eagle" data-genre="telugu action">
+                <img src="../Movies/telugu/eagle.jpg" alt="">
+                <div class="content">
+                    <h6>Eagle</h6>
+                    <p>Eagle is an upcoming Indian Telugu-language action film written and directed by Karthik Gattamneni. It is produced by T. G. Vishwa Prasad and Vivek Kuchibhotla, under People Media Factory. It stars Ravi Teja in the titular role along with Anupama Parameswaran, Navdeep, Kavya Thapar, Srinivas Avasarala and Madhoo.</p>
+                    <button onclick="goToTicket('Eagle')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="saindhav" data-genre="telugu action">
+                <img src="../Movies/telugu/saindhav.jpg" alt="">
+                <div class="content">
+                    <h6>Saindhav</h6>
+                    <p>Saindhav is an upcoming Telugu movie scheduled to be released on 13 Jan, 2024. The movie is directed by Sailesh Kolanu and will feature Venkatesh Daggubati, Nawazuddin Siddiqui, Shraddha Srinath and Ruhani Sharma as lead characters.</p>
+                    <button onclick="goToTicket('Saindhav')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="salaar" data-genre="telugu action">
+                <img src="../Movies/telugu/salaar.jpg" alt="">
+                <div class="content">
+                    <h6>Salaar</h6>
+                    <p>
+                        A gang leader makes a promise to a dying friend by taking on other criminal gangs.</p>
+                    <button onclick="goToTicket('Salaar')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="guntur-karam" data-genre="telugu action">
+                <img src="../Movies/telugu/guntur-karam.jpeg" alt="">
+                <div class="content">
+                    <h6>Guntur Kaaram</h6>
+                    <p>Guntur Kaaram is an upcoming Indian Telugu-language action masala film written and directed by Trivikram Srinivas, and produced by S. Radha Krishna through Haarika & Hassine Creations. It stars Mahesh Babu, Sreeleela.</p>
+                    <button onclick="goToTicket('Guntur Kaaram')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="hanuman" data-genre="telugu action superhero">
+                <img src="../Movies/telugu/hanuman.jpg" alt="">
+                <div class="content">
+                    <h6>Hanuman</h6>
+                    <p>Hanuman is an upcoming Indian Telugu-language superhero film written and directed by Prasanth Varma. Produced by Primeshow Entertainment, the film features an ensemble cast of Teja Sajja, Amritha Aiyer</p>
+                    <button onclick="goToTicket('Hanuman')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="Hi_Nanna" data-genre="telugu romance">
+                <img src="../Movies/telugu/Hi_Nanna.jpg" alt="">
+                <div class="content">
+                    <h6>Hi Nanna</h6>
+                    <p>The lives of a doting father and his six-year-old take a drastic turn when the woman he loves marries someone else.</p>
+                    <button onclick="goToTicket('Hi Nanna')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="OG" data-genre="telugu action">
+                <img src="../Movies/telugu/OG.jpg" alt="">
+                <div class="content">
+                    <h6>OG</h6>
+                    <p>OG is an upcoming Indian action thriller film directed by Sujeeth and produced by D. V. V. Danayya of DVV Entertainment. The film stars Pawan Kalyan, Emraan Hashmi, and Priyanka Arul Mohan in lead roles. </p>
+                    <button onclick="goToTicket('OG')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="pushpa" data-genre="telugu action">
+                <img src="../Movies/telugu/pushpa.jpg" alt="">
+                <div class="content">
+                    <h6>Pushpa 2</h6>
+                    <p>Pushpa 2: The Rule is an upcoming Indian Telugu-language action drama film written and directed by Sukumar, produced by Mythri Movie Makers in association with Sukumar Writings, it stars Allu Arjun as the titular character alongside Fahadh Faasil and Rashmika Mandanna.</p>
+                    <button onclick="goToTicket('pushpa ')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="animal" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/animal.jpg" alt="">
+                <div class="content">
+                    <h6>Animal</h6>
+                    <p>A son undergoes a remarkable transformation as the bond with his father begins to fracture, and he becomes consumed by a quest for vengeance.</p>
+                    <button onclick="goToTicket('Animal')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="Blackmagic" data-genre="hindi sci-fi"><!--hindi---------------section-->
+                <img src="../Movies/hindi/blackmagic.jpg" alt="">
+                <div class="content">
+                    <h6>Blackmagic</h6>
+                    <p>The supernatural thriller Black Magic will be ready for release in 2024, which is being directed by the talented Vikas Bahl, has an all-star ensemble that includes prominent actors Ajay Devgn, R Madhavan, Manoj Anand, and Jyotika. </p>
+                    <button onclick="goToTicket('Blackmagic')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="bombay" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/bombay.jpg" alt="">
+                <div class="content">
+                    <h6>Bombay</h6>
+                    <p>This is a story of a close knit underworld group where lies, greed, lust and untimely death by murder. Ulas Mhatre is underworld don who operates his activities with his trusted gang members Nana, Tatya, and Sherry, Here Nana has hidden ambitions to one day take the top place of Don.</p>
+                    <button onclick="goToTicket('Bombay')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="fighter" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/fighter.jpg" alt="">
+                <div class="content">
+                    <h6>Fighter</h6>
+                    <p>Fighter (2024)
+                        An aspirational young man named Shamsher Pathania must overcome his obstacles after enlisting in the Indian Air Force in order to become a hero of the Indian Armed Forces.</p>
+                    <button onclick="goToTicket('Fighter')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="gadar2" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/gadar2.jpg" alt="">
+                <div class="content">
+                    <h6>Gadar 2</h6>
+                    <p>When Tara Singh goes missing during a skirmish and is believed to be captured in Pakistan, his son Jeete sets out to rescue him and enters a labyrinth from which they both must escape at all costs.</p>
+                    <button onclick="goToTicket('gadar2')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="ganpath" data-genre="hindi action sci-fi"><!--hindi---------------section-->
+                <img src="../Movies/hindi/ganpath.jpg" alt="">
+                <div class="content">
+                    <h6>Ganpath</h6>
+                    <p>In a dystopian future, Ganapath, a relentless and skilled vigilante, embarks on a mission to dismantle a powerful criminal empire that has gripped the city in fear, Ganapath becomes a symbol of hope for the oppressed in which leads dark.</p>
+                    <button onclick="goToTicket('ganpath')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="main atal hoon" data-genre="hindi "><!--hindi---------------section-->
+                <img src="../Movies/hindi/main atal hoon.jpg" alt="">
+                <div class="content">
+                    <h6>Main Atal Hoon</h6>
+                    <p>The life of Atal Bihari Vajpayee, who served as the Prime Minister of India thrice during his tenure. The Bharat Ratna and Padma Vibhushan recipient was also one of the key senior leaders and co-founders of Bharatiya Janata Party (BJP)</p>
+                    <button onclick="goToTicket('main atal hoon')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="tehran" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/tehran.jpg" alt="">
+                <div class="content">
+                    <h6>Tehran</h6>
+                    <p>A Mossad agent embarks on her first mission as a computer hacker in her home town of Tehran.</p>
+                    <button onclick="goToTicket('tehran')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="tiger3" data-genre="hindi action"><!--hindi---------------section-->
+                <img src="../Movies/hindi/tiger3.jpg" alt="">
+                <div class="content">
+                    <h6>Tiger 3</h6>
+                    <p>Tiger and Zoya are back - to save the country and their family. This time it's personal.</p>
+                    <button onclick="goToTicket('tiger3')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="welcome to the jungle" data-genre="hindi action comedy"><!--hindi---------------section-->
+                <img src="../Movies/hindi/welcome to the jungle.jpg" alt="">
+                <div class="content">
+                    <h6>Welcome To The Jungle</h6>
+                    <p>Police officers Jay Bakshi and Sandhya have been given task to track down notorious criminal Raj Solanki. Things take an unexpected turn when JaY finds out that Raj plays a significant role in his life.</p>
+                    <button onclick="goToTicket('welcome to the jungle')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="13" data-genre="tamil action"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/13.jpg" alt="">
+                <div class="content">
+                    <h6>13</h6>
+                    <p>After spending the night with a girl, an aspiring filmmaker wakes up to find her lying dead next to him. As he tries to recollect his memories, he plans an escape before things descend into chaos.</p>
+                    <button onclick="goToTicket('13')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="ayalaan" data-genre="tamil action sci-fi"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/ayalaan.jpg" alt="">
+                <div class="content">
+                    <h6>Ayalaan</h6>
+                    <p>A lost alien seeks help to go back to his home, but everything gets harder after the alien returns to its home.</p>
+                    <button onclick="goToTicket('ayalaan')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="captainmiller" data-genre="tamil action"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/captainmiller.jpg" alt="">
+                <div class="content">
+                    <h6>captainmiller</h6>
+                    <p>A renegade Captain and his unconventional outlaws execute daring heists in the 1930s and 1940s. Miller must decide whether to continue running or confront the challenges head-on.</p>
+                    <button onclick="goToTicket('captainmiller')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="dhruvanatchathiram" data-genre="tamil action "><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/dhruvanatchathiram.jpg" alt="">
+                <div class="content">
+                    <h6>Dhruva Natchathiram</h6>
+                    <p>John, a New York-based undercover agent and his team is entrusted with a secret mission to bring back the leader of the team who has gone missing mysteriously.</p>
+                    <button onclick="goToTicket('dhruvanatchathiram')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="japan" data-genre="tamil action comedy"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/japan.jpg" alt="">
+                <div class="content">
+                    <h6>Japan</h6>
+                    <p>Japan/Film synopsis a notorious master thief steals a fortune in jewels at a jewelry shop, and a cat-and-mouse chase ensues between him and the police.</p>
+                    <button onclick="goToTicket('japan')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="Kanguva" data-genre="tamil action sci-fi"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/Kanguva.jpeg" alt="">
+                <div class="content">
+                    <h6>Kanguva</h6>
+                    <p>in association with UV Creations, has produced Kanguva, which has the tagline 'A mighty valiant saga,' and refers to a man with the power of fire. Part of the story is set more than 1500 years ago.</p>
+                    <button onclick="goToTicket('Kanguva')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="lal salaam" data-genre="tamil"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/lal salaam.jpg" alt="">
+                <div class="content">
+                    <h6>Lal Salaam</h6>
+                    <p>The music for the movie is composed by AR Rahman. 'Lal Salaam' is a sports drama that focuses on test cricket and apart from Rajinikanth, former Indian cricketer Kapil Dev also plays a cameo in the film</p>
+                    <button onclick="goToTicket('lal salaam')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="leo" data-genre="tamil action"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/leo.jpg" alt="">
+                <div class="content">
+                    <h6>Leo</h6>
+                    <p>A mild-mannered cafe owner gets caught in the crosshairs of a drug cartel.</p>
+                    <button onclick="goToTicket('leo')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="thangalaan" data-genre="tamil action "><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/thangalaan.png" alt="">
+                <div class="content">
+                    <h6>Thangalaan</h6>
+                    <p>the tribal leader Thangalaan's valiant struggle against the British after they plot to seize their land for gold mining.</p>
+                    <button onclick="goToTicket('thangalaan')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="thuglife" data-genre="tamil action"><!--````````````````TAMIL```````---------section-->
+                <img src="../Movies/tamil/thuglife.jpeg" alt="">
+                <div class="content">
+                    <h6>Thuglife</h6>
+                    <p>Thug Life is an upcoming Tamil movie. The movie is directed by Mani Ratnam and will feature Kamal Haasan, jayam ravi, Trisha Krishnan and Dulquer Salmaan as lead characters. Other popular actors who were roped in for Thug Life are Abhirami and Nasser.</p>
+                    <button onclick="goToTicket('thuglife')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="hondisi bareyiri" data-genre="kannada romance"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/hondisi bareyiri.jpg" alt="">
+                <div class="content">
+                    <h6>Hondisi Bareyiri</h6>
+                    <p>Hondisi Bareyiri is a 2023 Kannada romantic drama film written and directed by debutant Ramenahalli Jagannatha, produced by Sunday Cinemas. It features Praveen Tej, Naveen Shankar, Shri Mahadev, Aishani Shetty, Bhavana Rao, Anirudh Acharya and Archana Jois.</p>
+                    <button onclick="goToTicket('hondisi bareyiri')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="hostelhudugarubekagiddare" data-genre="kannada comedy"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/hostelhudugarubekagiddare.jpg" alt="">
+                <div class="content">
+                    <h6>hostel Hudugaru Bekagiddare</h6>
+                    <p>Hostel Hudugaru Bekagiddare is an Indian Kannada-language black comedy film directed by Nithin Krishnamurthy in his directorial debut and presented by Rakshit Shetty under Paramvah Pictures banner</p>
+                    <button onclick="goToTicket('hostelhudugarubekagiddare')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="juliet2" data-genre="kannada action"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/juliet2.jpg" alt="">
+                <div class="content">
+                    <h6>Juliet 2</h6>
+                    <p>Juliet, an independent woman, is very affectionately attached to her father. One night, she witnesses a dreadful incident that reconnects to her past traumas. Will she be able to prevail over the brutality behind those dark doors?</p>
+                    <button onclick="goToTicket('juliet2)">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="kabzaa" data-genre="kannada action"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/kabzaa.jpg" alt="">
+                <div class="content">
+                    <h6>Kabzaa</h6>
+                    <p>Arkeshwara is the son of a freedom fighter who is killed by the British. Years later, he grows up to become an Air Force officer but an unfortunate incident turns him into a gangster.</p>
+                    <button onclick="goToTicket('kabzaa')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="kranti" data-genre="kannada action"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/kranti.jpg" alt="">
+                <div class="content">
+                    <h6>Kranti</h6>
+                    <p>Upon returning to his dilapidated old school, a business magnate discovers and fights against a corrupt bureaucracy that aims to privatise government schools.</p>
+                    <button onclick="goToTicket('kranti')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="lovebirds" data-genre="kannada romance"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/lovebirds.jpg" alt="">
+                <div class="content">
+                    <h6>Love Birds</h6>
+                    <p>The ups and downs of married life lead a young couple, Deepak and Pooja, towards a bitter divorce. However, their divorce lawyer feels determined to reunite the estranged lovers.</p>
+                    <button onclick="goToTicket('lovebirds')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="pentagon" data-genre="kannada "><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/pentagon.jpg" alt="">
+                <div class="content">
+                    <h6>Pentagon</h6>
+                    <p>Pentagon is an anthology of five stories directed by 5 directors. Theme of the movie is based on death and its consequence. All the stories are connected to a book and reach story tells a different genre story including the theme.</p>
+                    <button onclick="goToTicket('pentagon')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="raghavendrastores" data-genre="kannada comedy"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/raghavendrastores.jpg" alt="">
+                <div class="content">
+                    <h6>Ragavendra Stores</h6>
+                    <p>
+                        Hayavadana is a 40-year-old bachelor who cooks at his family's restaurant, Raghavendra Stores. However, a twist of fate gets him married to a singer named Vaijayanthi.</p>
+                    <button onclick="goToTicket('raghavendrastores')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="sreemantha" data-genre="kannada "><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/sreemantha.jpg" alt="">
+                <div class="content">
+                    <h6>Sreemantha</h6>
+                    <p>A Kannada movie dedicated to all the Indian farmers starring Sonu Sood and Vaishnavi Patwardhan in the lead.</p>
+                    <button onclick="goToTicket('sreemantha')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="veeram" data-genre="kannada action"><!--/////////////////Kannada``---------section-->
+                <img src="../Movies/kannada/veeram.jpg" alt="">
+                <div class="content">
+                    <h6>Veeram</h6>
+                    <p>Between two brothers who are brought up by their sister, one embraces a life of crime and the other is an honest man. But things take a turn when the latter loses his brother and wants revenge.</p>
+                    <button onclick="goToTicket('veeram')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="hf4" data-genre="hindi comedy"><!--/////////////////comedy``---------section-->
+                <img src="../Movies/genre/comedy/hf4.jpg" alt="">
+                <div class="content">
+                    <h6>Housefull 4</h6>
+                    <p>Three brothers are set to marry three sisters. However, a peek into the distant past reveals to one of the brothers that their brides have been mixed up in their current reincarnation.</p>
+                    <button onclick="goToTicket('hf4')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="homealone" data-genre="english comedy"><!--/////////////////comedy``---------section-->
+                <img src="../Movies/genre/comedy/homealone.jpg" alt="">
+                <div class="content">
+                    <h6>Homealone </h6>
+                    <p>Home Alone is a series of American Christmas family comedy films originally created by John Hughes, and directed by Chris Columbus, Raja Gosnell, Rod Daniel, Peter Hewitt, and Dan Mazer. </p>
+                    <button onclick="goToTicket('homealone')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="jathi ratnalu" data-genre="telugu comedy"><!--/////////////////comedy``---------section-->
+                <img src="../Movies/genre/comedy/jathi ratnalu.jpg" alt="">
+                <div class="content">
+                    <h6>Jathi Ratnalu</h6>
+                    <p>Three young men leave their village to find decent jobs in the city. However, they find themselves in a pickle when a minister blackmails them for a lost mobile phone.</p>
+                    <button onclick="goToTicket('jathi ratnalu')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="mad" data-genre="telugu comedy"><!--/////////////////comedy``---------section-->
+                <img src="../Movies/genre/comedy/mad.jpg" alt="">
+                <div class="content">
+                    <h6>MAD</h6>
+                    <p>The fun-filled life and times of Manoj, Ashok and Damodar (MAD) on an engineering campus. If you look past this, the hilarity in MAD comes from the small, absurd incidents.</p>
+                    <button onclick="goToTicket('mad')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="the mask" data-genre="english comedy"><!--/////////////////comedy``---------section-->
+                <img src="../Movies/genre/comedy/the mask.jpg" alt="">
+                <div class="content">
+                    <h6>The Mask</h6>
+                    <p>When timid bank clerk Stanley Ipkiss (Jim Carrey) discovers a magical mask containing the spirit of the Norse god Loki, his entire life changes. While wearing the mask, Ipkiss becomes a supernatural playboy exuding charm and confidence which allows him to catch the eye of local nightclub singer Tina Carlyle.</p>
+                    <button onclick="goToTicket('the mask')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="365 days" data-genre="english romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/365 days.jpg" alt="">
+                <div class="content">
+                    <h6>365 Days</h6>
+                    <p>Massimo is a member of the Sicilian Mafia family and Laura is a sales director. She does not expect that on a trip to Sicily trying to save her relationship, Massimo will kidnap her and give her 365 days to fall in love with him.</p>
+                    <button onclick="goToTicket('365 days')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="descendants of the sun" data-genre=" romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/descendants of the sun.jpg" alt="">
+                <div class="content">
+                    <h6>Descendants Of The Sun</h6>
+                    <p>Yoo Si-jin (Song Joong-ki) is a captain in the South Korean Army's special forces. He and his friend, Master Sergeant Seo Dae-young (Jin Goo), are off-duty when they witness a young man stealing a motorcycle; they apprehend him using toy guns they had been using for a doll shooting game.
+                    </p>
+                    <button onclick="goToTicket('descendants of the sun')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="fifty shades of grey" data-genre="english romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/fifty shades of grey.jpg" alt="">
+                <div class="content">
+                    <h6>Fifty Shades Of The Grey
+                    </h6>
+                    <p>Anastasia Steele (Johnson), a college graduate who begins a sadomasochistic relationship with young business magnate Christian Grey (Dornan).</p>
+                    <button onclick="goToTicket('fifty shades of grey ')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="its ok to not be ok" data-genre=" romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/it_s ok to not be okay.jpg" alt="">
+                <div class="content">
+                    <h6>Its Ok To Not Be Ok</h6>
+                    <p>The drama tells the story of Moon Kang Tae, a community health worker at a psychiatric ward who doesn't have time for love, and Go Moon Young, a successful children's-book author with antisocial behavior who seems to have never known love.
+                    </p>
+                    <button onclick="goToTicket('its ok to not be ok')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="junooniyat" data-genre="hindi romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/junooniyat.jpg" alt="">
+                <div class="content">
+                    <h6>Junooniyat</h6>
+                    <p>Suhani goes against her father's wishes by falling in love with Jahan, an army officer. However, her plan to elope with him gets ruined after they share a misunderstanding.</p>
+                    <button onclick="goToTicket('junooniyat')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="sita ramam" data-genre="telugu romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/sita ramam.jpg" alt="">
+                <div class="content">
+                    <h6>Sita Ramam</h6>
+                    <p>Set in 1964, it tells the story of Lieutenant Ram, an orphaned army officer serving at the Kashmir border, gets anonymous love letters from Sita Mahalakshmi, after which Ram is on a mission to find Sita and propose his love.</p>
+                    <button onclick="goToTicket('sita ramam')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="Titanic" data-genre="english romance"><!--/////////////////Romance``---------section-->
+                <img src="../Movies/genre/romance/Titanic.jpg" alt="">
+                <div class="content">
+                    <h6>Titanic</h6>
+                    <p>He felt a love story interspersed with the human loss would be essential to convey the emotional impact of the disaster. Production began on September 1, 1995, when Cameron shot footage of the Titanic wreck. </p>
+                    <button onclick="goToTicket('Titanic')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="adbhutham" data-genre="telugu sci-fi romance"><!--/////////////////sci -fi``---------section-->
+                <img src="../Movies/genre/sciencefiction/adbhutham.jpg" alt="">
+                <div class="content">
+                    <h6>Adbhutham</h6>
+                    <p>Vasu, a thug, kidnaps a police officer's daughter, Mohana, at the request of a gangster, who is desperate to take revenge on the police officer. What happens when Vasu and Mohana fall in love?</p>
+                    <button onclick="goToTicket('adbhutham')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="g.i.joe" data-genre="english sci-fi action"><!--/////////////////sci-fi``---------section-->
+                <img src="../Movies/genre/sciencefiction/g.i.joe.jpg" alt="">
+                <div class="content">
+                    <h6>G.I.Joe</h6>
+                    <p> two American soldiers, Duke and Ripcord, who join the G.I. Joe Team after being attacked by Military Armaments Research Syndicate (M.A.R.S.) troops.</p>
+                    <button onclick="goToTicket('g.i.joe')">Book Now</button>
+                </div>
+            </div>
+                <div class="image-box" data-name="matrix" data-genre="english sci-fi"><!--/////////////////sci-fi``---------section-->
+                    <img src="../Movies/genre/sciencefiction/matrix.jpg" alt="">
+                    <div class="content">
+                        <h6>Matrix</h6>
+                        <p>Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he meets Morpheus.</p>
+                        <button onclick="goToTicket('matrix')">Book Now</button>
+                    </div>
+            </div>
+            <div class="image-box" data-name="tenet" data-genre="english sci-fi"><!--/////////////////sci-fi``---------section-->
+                <img src="../Movies/genre/sciencefiction/tenet.jpg" alt="">
+                <div class="content">
+                    <h6>Tenet</h6>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend the laws of nature in order to be successful in his mission.</p>
+                    <button onclick="goToTicket('tenet')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="transformers" data-genre="english sci-fi"><!--/////////////////sci-fi``---------section-->
+                <img src="../Movies/genre/sciencefiction/transformers.jpg" alt="">
+                <div class="content">
+                    <h6>Transformers: Rise Of The Beasts</h6>
+                    <p>Optimus Prime and the Autobots take on their biggest challenge yet. When a new threat capable of destroying the entire planet emerges, they must team up with a powerful faction of Transformers known as the Maximals to save Earth.</p>
+                    <button onclick="goToTicket('transformers')">Book Now</button>
+                </div>
+            </div>
+            <div class="image-box" data-name="tron" data-genre="english sci-fi"><!--/////////////////sci-fi``---------section-->
+                <img src="../Movies/genre/sciencefiction/tron.jpg" alt="">
+                <div class="content">
+                    <h6>Tron:Legacy</h6>
+                    <p>Sam misses his father, a virtual world designer, and enters a virtual space that has become much more dangerous than his father intended. Now, both father and son embark upon a life-and-death journey.</p>
+                    <button onclick="goToTicket('tron')">Book Now</button>
+                </div>
+            </div>  
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

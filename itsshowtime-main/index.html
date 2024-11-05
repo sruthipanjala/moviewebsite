@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loco.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="minicircle">   
+    </div>
+    <div id="main">
+        <div id="preloader">
+            <h1 class="counter">0</h1>
+            <div class="overlay">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <!-- Home -->
+        <div id="home">
+            <div id="nav">
+                <img src="https://searchvectorlogo.com/wp-content/uploads/2019/12/institute-of-spring-technology-ist-logo-vector.png" alt="images">
+                <div id="right">
+<!--                     <a href="#home" class="nav-link" data-target="home">Home</a>
+                    <a href="#genre" class="nav-link" data-target="genre">Genre</a>
+                    <a href="#lang" class="nav-link" data-target="lang">Lang</a>
+                    <a href="#food" class="nav-link" data-target="food">Food</a>
+                    <a href="#contact" class="nav-link" data-target="contact">Contact</a> -->
+                    <a href="" class="nav-link" >Home</a>
+                    <a href="" class="nav-link" >Genre</a>
+                    <a href="" class="nav-link">Lang</a>
+                    <a href="" class="nav-link">Food</a>
+                    <a href="" class="nav-link">Contact</a>
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+
+            <div id="homemain">
+                <h1>Boot Your Tickets</h1>
+                <div class="headings">
+                    <div class="headings1">
+                        <h1>It's</h1> 
+                    </div>
+                    <div class="headings2">
+                        <h1>Show</h1>
+                        <h1>Time</h1>
+                    </div> 
+                    <div class="video-container">
+                        <video autoplay loop muted src="./Movies/bgv.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container -->
+        <div class="container">
+            
+            <div id="slide">
+                <div class="item" style="background-image: url(Movies/salaar.jpg);">
+                    <div class="content">
+                        <div class="name">Salaar</div>
+                        <div class="des">Salaar: Part 1 – Ceasefire is an upcoming Indian Telugu-language action thriller film written and directed by Prashanth Neel.</div>
+                        <a href="https://youtu.be/bUR_FKt7Iso?si=b0BeB7SPVVyUshRo">Trailer</a>
+                        <button onclick="goToTicket('Salaar')">Book Now</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Movies/avatar3.jpg);">
+                    <div class="content">
+                        <div class="name">Avatar 3</div>
+                        <div class="des">Avatar 3 is scheduled for release on December 20, 2024, two years after Avatar: The Way of Water hit theaters.</div>
+                        <a href="https://youtu.be/a8Gx8wiNbs8?si=I1WdCCNAL5wNfTbe">Trailer</a>
+                        <button onclick="goToTicket('Avatar3')">Book Now</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Movies/animal.jpg);">
+                    <div class="content">
+                        <div class="name">Animal</div>
+                        <div class="des">Animal is an upcoming Indian Hindi language action thriller film co-written, edited and directed by Sandeep Reddy Vanga and produced by T-Series.</div>
+                        <a href="">Trailer</a>
+                        <button onclick="goToTicket('Animal')">Book Now</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Movies/leo.jpg);">
+                    <div class="content">
+                        <div class="name">Leo</div>
+                        <div class="des">Leo is an upcoming Indian Tamil-language action thriller film directed by Lokesh Kanagaraj, who co-wrote it with Rathna Kumar and Deeraj Vaidy.</div>
+                        <a href="">Trailer</a><button onclick="goToTicket('Leo')">Book Now</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Movies/fighter.jpg);">
+                    <div class="content">
+                        <div class="name">Fighter</div>
+                        <div class="des">Fighter is an upcoming Indian Hindi-language action film directed by Siddharth Anand and produced by Viacom18 Studios and Marflix Pictures.</div>
+                        <a href="">Trailer</a><button onclick="goToTicket('Fighter')">Book Now</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Movies/dunki.jpg);">
+                    <div class="content">
+                        <div class="name">Dunki</div>
+                        <div class="des">Dunki is an upcoming 2023 Indian Hindi-language social comedy-drama film about an illegal immigration technique named "Donkey Flight".</div>
+                        <a href="">Trailer</a><button onclick="goToTicket('Dunki')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+        <!-- recommend -->
+        <div class="recommend">
+            <h2 class="head-line" data-value="UPCOMING HOLLYWOOD MOVIES">Upcoming Hollywood Movies</h2>
+            <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/Despicable-Me-4.jpg" draggable="false" />
+                    <h1>Despicable Me 4</h1>
+                    <button onclick="goToTicket('Despicable Me 4')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/dune 2.jpg" draggable="false" />
+                    <h1>Dune2</h1>
+                    <button onclick="goToTicket('Dune2')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/Kraven-The-Hunter.jpg" draggable="false" />
+                    <h1>Kraven The Hunter</h1>
+                    <button onclick="goToTicket('Kraven The Hunter')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/kingdom of the planet of the apes.jpg" draggable="false" />
+                    <h1>Kingdom Of The Planet Of The Apes</h1>
+                    <button onclick="goToTicket('Kingdom Of The Planet Of The Apes')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/Kung-Fu-Panda-4.jpg" draggable="false" />
+                    <h1>Kung Fu Panda 4</h1>
+                    <button onclick="goToTicket('Kung Fu Panda 4')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/migration.jpg" draggable="false" />
+                    <h1>Migration</h1>
+                    <button onclick="goToTicket('Migration')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/scream6.jpg" draggable="false" />
+                    <h1>Scream 6</h1>
+                    <button onclick="goToTicket('Scream6')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/sonic2.jpg" draggable="false" />
+                    <h1>Sonic 2</h1>
+                    <button onclick="goToTicket('Sonic2')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/venom3.jpg" draggable="false" />
+                    <h1>Venom 3</h1>
+                    <button onclick="goToTicket('Venom3')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming english/thanksgiving.jpg" draggable="false" />
+                    <h1>Thanksgiving</h1>
+                    <button onclick="goToTicket('Thanksgiving')">Book Now</button>
+                </div>
+
+                
+                <!-- <img class="image" src="/Saikishore/project1/Movies/" draggable="false" /> -->
+            </div>
+            
+            <h2 class="head-line" data-value="UPCOMING INDIAN MOVIES">Upcoming Indian Movies</h2>
+            <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/devara.jpg" draggable="false" />
+                    <h1>Devara</h1>
+                    <button onclick="goToTicket('Devara')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/eagle.jpg" draggable="false" />
+                    <h1>Eagle</h1>
+                    <button onclick="goToTicket('Eagle')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/Guntur-Kaaram.jpg" draggable="false" />
+                    <h1>Guntur Kaaram</h1>
+                    <button onclick="goToTicket('Guntur Kaaram')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/gangs of godavari.jpg" draggable="false" />
+                    <h1>Gangs of Godavari</h1>
+                    <button onclick="goToTicket('Gangs of Godavari')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/hari hara veera mallu.jpg" draggable="false" />
+                    <h1>Hari Hara Veera Mallu</h1>
+                    <button onclick="goToTicket('Hari Hara Veera Mallu')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/kalki.jpg" draggable="false" />
+                    <h1>Kalki</h1>
+                    <button onclick="goToTicket('Kalki')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/naa samiranga.jpg" draggable="false" />
+                    <h1>Naa Samiranga</h1>
+                    <button onclick="goToTicket('Naa Samiranga')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/og.jpg" draggable="false" />
+                    <h1>OG</h1>
+                    <button onclick="goToTicket('OG')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/pushpa2.jpg" draggable="false" />
+                    <h1>Pushpa 2</h1>
+                    <button onclick="goToTicket('Pushpa 2')">Book Now</button>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="Movies/upcoming movies/upcoming telugu/saindhav.jpg" draggable="false" />
+                    <h1>Saindhav</h1>
+                    <button onclick="goToTicket('Saindhav')">Book Now</button>
+                </div>
+                <!-- <div class="image-container">
+                    <img class="image" src="/project1/Movies/upcoming movies/upcoming telugu/devara.jpg" draggable="false" />
+                    <h1>Devara</h1>
+                    <button onclick="goToTicket('Devara')">Book Now</button>
+                </div> -->
+
+                
+                <!-- <img class="image" src="/Saikishore/project1/Movies/" draggable="false" /> -->
+            </div>
+        </div>
+        <!-- Genre -->
+        <section id="genre">
+            <div id="genres">
+                <div class="lang-head">
+                    <h1 class="head-line" data-value="GENRES">Genres</h1>
+                </div>
+                <div class="elem superhero" onclick="redirectToMovies('superhero')">
+                    <img src="Movies/English/captain.jpg" alt="">
+                    <h1>Super Hero</h1>
+                </div>
+                <div class="elem romance" onclick="redirectToMovies('romance')">
+                    <img src="Movies/English/romance.jpg" alt="">
+                    <h1>Romance</h1>
+                </div>
+                <div class="elem comedy" onclick="redirectToMovies('comedy')">
+                    <img src="Movies/telugu/comedy.webp" alt="">
+                    <h1>Comedy</h1>
+                </div>
+                <div class="elem action" onclick="redirectToMovies('action')">
+                    <img src="Movies/English/action.jpg" alt="">
+                    <h1>Action</h1>
+                </div>
+                <div class="elem thriller" onclick="redirectToMovies('sci-fi')">
+                    <img src="Movies/English/inception.jpg" alt="">
+                    <h1>Science Fiction</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Languages -->
+        <section id="lang">
+            <div class="languages">
+                <div class="lang-head">
+                    <h1 class="head-line" data-value="LANGUAGES">Languages</h1>
+                </div>
+                <div class="lang-elem" onclick="redirectToMovies('english')">
+                    <img src="Movies/English/blue-beetle.jpg" alt="">
+                    <div class="text-div">
+                        <h1>English</h1>
+                        <h1>English</h1>
+                    </div>
+                    <img src="Movies/English/godzilla vs kong 2.jpg" alt="">
+                </div>
+                <div class="lang-elem"  onclick="redirectToMovies('telugu')">
+                    <img src="Movies/telugu/OG.jpg" alt="">
+                    <div class="text-div">
+                        <h1>Telugu</h1>
+                        <h1>Telugu</h1>
+                    </div>
+                    <img src="Movies/telugu/pushpa.jpg" alt="">
+                </div>
+                <div class="lang-elem" onclick="redirectToMovies('hindi')">
+                    <img src="Movies/hindi/tiger3.jpg" alt="">
+                    <div class="text-div">
+                        <h1>Hindi</h1>
+                        <h1>Hindi</h1>
+                    </div>
+                    <img src="Movies/hindi/main atal hoon.jpg" alt="">
+                </div>
+                <div class="lang-elem" onclick="redirectToMovies('tamil')">
+                    <img src="Movies/tamil/japan.jpg" alt="">
+                    <div class="text-div">
+                        <h1>Tamil</h1>
+                        <h1>Tamil</h1>
+                    </div>
+                    <img src="Movies/tamil/thuglife.jpeg" alt="">
+                </div>
+                <div class="lang-elem" onclick="redirectToMovies('kannada')">
+                    <img src="Movies/kannada/ghost.jpg" alt="">
+                    <div class="text-div">
+                        <h1>Kannada</h1>
+                        <h1>Kannada</h1>
+                    </div>
+                    <img src="Movies/kannada/love.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Food -->
+        <section id="food">
+            <section class="slider">
+                <div class="lang-head">
+                    <h1 class="head-line" data-value="FOOD">Food</h1>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (2).png" alt="" class="card-img">
+                        <h1 class="card-title">Cheese HumBurger</h1>
+                        <div class="card-body">
+                            <!-- <div class="card-star">
+                                <span class="rating-value">4.5</span>
+                                <span class="star">&#9733;</span>
+                            </div> -->
+                            <p class="card-price"><span data-price="60">60</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (5).png" alt="" class="card-img">
+                        <h1 class="card-title">Burger</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="60">60</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (11).png" alt="" class="card-img">
+                        <h1 class="card-title">Coca Cola</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="40">40</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (3).png" alt="" class="card-img">
+                        <h1 class="card-title">Sprite</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="40">40</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (7).png" alt="" class="card-img">
+                        <h1 class="card-title">Lays</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="20">20</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (8).png" alt="" class="card-img">
+                        <h1 class="card-title">Doritos</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="20">20</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (9).png" alt="" class="card-img">
+                        <h1 class="card-title">French Fries</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="50">50</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="Movies/food/1 (4).png" alt="" class="card-img">
+                        <h1 class="card-title">Water Bottle</h1>
+                        <div class="card-body">
+                            <p class="card-price"><span data-price="20">20</span>rs</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-border add-to-cart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <span class="arrow left">&#129120;</span>
+                <span class="arrow right">&#129122;</span>
+    
+                <div class="shopping-cart" data-product-count="0">
+                    <span class="cart-icon">&#128722;</span>
+                </div>
+            </section>
+        </section>
+        
+        <!-- contact us -->
+        <section id="contact">
+            <div class="contact">
+                <div class="lang-head">
+                    <h1 class="head-line" data-value="CANTACT US">Contact Us</h1>
+                </div>
+                <div class="center">
+                    <div class="logo-div">
+                        <div id="logo">
+                            <img src="Movies/logos/IST.png" alt="ist" draggable="false">
+                            <img src="Movies/logos/IST (1).png" alt="ist" draggable="false">
+                            <img src="Movies/logos/IST (2).png" alt="ist" draggable="false">
+                            <img src="Movies/logos/IST (3).png" alt="ist" draggable="false">
+                            <img src="Movies/logos/IST (4).png" alt="ist" draggable="false">
+                            <!-- <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+1.svg" draggable="false" />
+                            <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+2.svg" draggable="false" />
+                            <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+3.svg" draggable="false" />
+                            <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+4.svg" draggable="false" />
+                            <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+5.svg" draggable="false" /> -->
+                        </div>
+            
+                        <div class="icons">
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                            <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        </div>            
+                    </div>
+                    <div class="team">
+                        <div class="title">Our Team</div>
+                        <div class="profiles">
+                            <div class="profile">
+                                <div class="card">
+                                    <div class="head">
+                                        <img src="Movies/mk.jpeg" alt="">
+                                        <div class="name">M Karthikeya</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="role">Full-Stack Developer</div>
+                                        A proficient full-stack developer equipped with strong capabilities in both front-end and back-end development.
+                                    </div>
+                                    <div class="icons">
+                                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href=""><i class="fa-brands fa-github"></i></a>
+                                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                                <img src="Movies/mk.jpeg" alt="" id="pic">
+                                <div class="details">M Karthikeya
+                                    <span>Full-Stack Developer</span>
+                                </div>
+                            </div>
+                            <div class="profile">
+                                <div class="card">
+                                    <div class="head">
+                                        <img src="Movies/msk2.jpeg" alt="">
+                                        <div class="name">M Saikishore</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="role">Full-Stack Developer</div>
+                                        A versatile full-stack developer, showcasing expertise in front & back-end development, strengthening the capabilities of our team.
+                                    </div>
+                                        <div class="icons">
+                                        <a href="https://li"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="https://github.com/saikishoreMSK"><i class="fa-brands fa-github"></i></a>
+                                        <a href="https://www.sai163415@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                                <img src="Movies/msk2.jpeg" alt="" id="pic">
+                                <div class="details">M Saikishore
+                                    <span>Full-Stack Developer</span>
+                                </div>
+                            </div> 
+                            <div class="profile">
+                                <div class="card">
+                                    <div class="head">
+                                        <img src="Movies/ksk.jpeg" alt="">
+                                        <div class="name">K ShashiKanth</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="role">Full-Stack Developer</div>
+                                        A proficient developer in both front & back-end technologies, contributing to our group's diverse expertise.
+                                    </div>
+                                    <div class="icons">
+                                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href=""><i class="fa-brands fa-github"></i></a>
+                                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                                <img src="Movies/ksk.jpeg" alt="" id="pic">
+                                <div class="details">K ShashiKanth
+                                    <span>Full-Stack Developer</span>
+                                </div>
+                            </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    
+</body>
+</html>
